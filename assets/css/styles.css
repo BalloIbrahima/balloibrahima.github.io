@@ -401,6 +401,7 @@ img {
     display: inline-flex;
     align-items: center;
     transition: .3s;
+    border: none;
 
 }
 
@@ -1165,7 +1166,7 @@ img {
         }
 
         .home__content {
-            padding-top: 2.5rem;
+            padding-top: 5.5rem;
             column-gap: 2rem;
         }
         .home__blob {
