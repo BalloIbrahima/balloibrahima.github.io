@@ -204,28 +204,51 @@ themeButton.addEventListener('click', () => {
 })
 
 // fuction sendMail
+// function sendMail(){
+//   console.log('testt')
+//   console.log(document.getElementById('email').value)
+//   console.log(document.getElementById('object').value)
+//   console.log(document.getElementById('message').value)
+
+
+
+//   Email.send({
+//     Host : "smtp.gmail.com",
+//     Username : "ibrahimaballo01@gmail.com",
+//     Password : "izjajdzixllpgchu",
+//     To : 'ibrahimaballo01@gmail.com',
+//     From : document.getElementById('email').value,
+//     Subject : document.getElementById('object').value,
+//     Body : "Nom Complet : "+document.getElementById('nom').value
+//       +'/n email :'+document.getElementById('email').value
+//       +'/n object :'+document.getElementById('object').value
+//       +'/n message :'+document.getElementById('message').value
+
+//   }).then(
+//     message => alert(message)
+//   );
+
+// }
 function sendMail(){
-  console.log('testt')
-  console.log(document.getElementById('email').value)
-  console.log(document.getElementById('object').value)
-  console.log(document.getElementById('message').value)
+  var params = {
+    name: document.getElementById("nom").value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
 
 
+  const serviceID = "service_oqkdz9f";
+  const templateID = "template_w6z6ude";
 
-  Email.send({
-    Host : "smtp.gmail.com",
-    Username : "ibrahimaballo01@gmail.com",
-    Password : "izjajdzixllpgchu",
-    To : 'ibrahimaballo01@gmail.com',
-    From : document.getElementById('email').value,
-    Subject : document.getElementById('object').value,
-    Body : "Nom Complet : "+document.getElementById('nom').value
-      +'/n email :'+document.getElementById('email').value
-      +'/n object :'+document.getElementById('object').value
-      +'/n message :'+document.getElementById('message').value
-
-  }).then(
-    message => alert(message)
-  );
+  emailjs.send(serviceID,templateID,params)
+  .then(
+    res =>{
+      document.getElementById("nom").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("Message envoyé avec succès")
+    })
+    .catch((err) => console.log(err));
 
 }
