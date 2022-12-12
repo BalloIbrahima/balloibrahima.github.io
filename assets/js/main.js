@@ -237,8 +237,8 @@ function sendMail(){
   };
 
 
-  const serviceID = "service_oqkdz9f";
-  const templateID = "template_w6z6ude";
+  const serviceID = "service_xzts57e";
+  const templateID = "template_ppsdqwj";
 
   emailjs.send(serviceID,templateID,params)
   .then(
