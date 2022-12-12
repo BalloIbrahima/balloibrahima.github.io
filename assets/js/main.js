@@ -230,12 +230,16 @@ themeButton.addEventListener('click', () => {
 
 // }
 function sendMail(){
+  
+  console.log(document.getElementById('email').value)
+  console.log(document.getElementById('object').value)
+  console.log(document.getElementById('message').value)
+
   var params = {
     name: document.getElementById("nom").value,
     email: document.getElementById('email').value,
     message: document.getElementById('message').value,
   };
-
 
   const serviceID = "service_xzts57e";
   const templateID = "template_ppsdqwj";

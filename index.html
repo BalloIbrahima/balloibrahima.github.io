@@ -698,15 +698,15 @@
                         </div>
                     </div>
     
-                    <form action="#" onsubmit="sendMail()" class="contact__form grid">
+                    <form action="javascript:sendMail()" onsubmit="sendMail()" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="lbl" id="nom" class="contact__label">Nom complet</label>
+                                <label for="lbl" id="nomtext" class="contact__label">Nom complet</label>
                                 <input type="text" id="nom" class="contact__input" required>
                             </div>
     
                             <div class="contact__content">
-                                <label for="lbl" id="email" class="contact__label">E-mail</label>
+                                <label for="lbl" id="emailtext" class="contact__label">E-mail</label>
                                 <input type="email"  id="email" class="contact__input" required>
                             </div>
                         </div>
@@ -717,7 +717,7 @@
                         </div>
     
                         <div class="contact__content">
-                            <label for="lbl" id="message" class="contact__label">Message</label>
+                            <label for="lbl" id="messagetext" class="contact__label">Message</label>
                             <textarea name="" id="message" cols="0" rows="7" class="contact__input" required></textarea>
                         </div>
     
